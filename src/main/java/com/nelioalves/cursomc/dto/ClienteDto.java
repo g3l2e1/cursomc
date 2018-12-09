@@ -8,8 +8,10 @@ import javax.validation.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Length;
 
 import com.nelioalves.cursomc.domain.Cliente;
+import com.nelioalves.cursomc.services.validation.ClienteUpdate;
 
-public class ClienteDto implements Serializable{
+@ClienteUpdate
+public class ClienteDto implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Integer id;
@@ -37,7 +39,6 @@ public class ClienteDto implements Serializable{
 	}
 
 	public void setId(Integer id) {
-		this.id = id;
 	}
 
 	public String getNome() {
